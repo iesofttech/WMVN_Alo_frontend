@@ -1,0 +1,11 @@
+.appFooter {
+    max-width: 561px;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+    flex-shrink: 0;
+    background: #000326 0% 0% no-repeat padding-box;
+    opacity: 1;
+}

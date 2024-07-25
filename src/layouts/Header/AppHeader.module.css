@@ -1,0 +1,185 @@
+.balanceMainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.imagesWrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  width: 70px;
+  height: 45px;
+  opacity: 1;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.sideMenuIconStyle {
+  width: 26px;
+  height: 26px;
+  opacity: 1;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  gap: 8px;
+  margin-right: 12px;
+}
+
+.appHeaderLoginBtn {
+  width: 93px;
+  height: 36px;
+  background: transparent linear-gradient(180deg, #dd7411 0%, #c1620a 100%) 0% 0% no-repeat padding-box;
+  /* border: 1px solid #dd7411; */
+  border: none;
+  border-radius: 18px;
+  text-align: center;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Kanit;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: capitalize;
+  /* text-shadow: 0px 1px 2px #000000b3; */
+
+  /* opacity: 1; */
+}
+
+.appHeaderSinupBtn {
+  width: 93px;
+  height: 36px;
+  background: transparent linear-gradient(180deg, #d7be75 0%, #cbac4e 100%) 0% 0% no-repeat padding-box;
+  /* border: 1px solid #ceba7e; */
+  border: none;
+  border-radius: 18px;
+  text-align: center;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Kanit;
+  letter-spacing: 0px;
+  color: #ffffff;
+  /* text-transform: capitalize; */
+  /* text-shadow: 0px 1px 2px #000000b3; */
+  /* opacity: 1; */
+}
+
+@media (max-width: 455px) and (min-width: 423px) {
+  .appHeaderLoginBtn {
+    width: 90px;
+  }
+
+  .appHeaderSinupBtn {
+    width: 90px;
+  }
+
+  .balanceTextContainer {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 422px) and (min-width: 408px) {
+  .appHeaderLoginBtn {
+    width: 80px;
+  }
+
+  .appHeaderSinupBtn {
+    width: 80px;
+    padding: 0px 3px;
+  }
+
+  .balanceTextContainer {
+    max-width: 130px;
+  }
+}
+
+@media (max-width: 407px) and (min-width: 372px) {
+  .appHeaderLoginBtn {
+    width: auto;
+    height: 30px;
+  }
+
+  .appHeaderSinupBtn {
+    width: auto;
+    height: 30px;
+    padding: 2px 5px 2px 5px;
+    box-sizing: border-box;
+  }
+
+  .buttonsContainer {
+    margin: 0px auto;
+  }
+
+  .balanceCoinsContainer {
+    gap: 1px;
+  }
+
+  .balanceTextContainer {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 368px) {
+  .sideMenuIconStyle {
+    width: 20px;
+    height: 20px;
+  }
+
+  .appHeaderLoginBtn {
+    width: 70px;
+    height: 27px;
+  }
+
+  .appHeaderSinupBtn {
+    width: 70px;
+    height: 26.7px;
+    padding: 0px 3px;
+  }
+
+  .balanceTextContainer {
+    max-width: 90px;
+  }
+}
+
+@media (max-width: 333px) {
+  .appHeaderLoginBtn {
+    width: 50px;
+    height: 27px;
+    font-size: 12px;
+    padding: 0px 3px;
+  }
+
+  .appHeaderSinupBtn {
+    width: 50px;
+    height: 26.5px;
+    font-size: 12px;
+    padding: 0px 3px;
+  }
+
+  .balanceTextContainer {
+    max-width: 75px;
+  }
+}

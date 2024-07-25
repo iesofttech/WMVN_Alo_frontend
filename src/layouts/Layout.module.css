@@ -1,0 +1,90 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin: auto;
+  position: relative;
+  min-height: 100vh;
+  max-width: 561px;
+  width: 100%;
+  background: #172634 0% 0% no-repeat padding-box;
+  /* background: url("../../Assets/home/Background.webp"); */
+}
+
+.content {
+  flex-grow: 1;
+  width: 100%;
+  /* display: flex; */
+  /* background: url('../../Assets/home/Background.png'); */
+  padding-top: 60px;
+}
+
+.LoaderHolder {
+  position: fixed;
+  z-index: 9999;
+  height: 100vh;
+  width: 561px;
+  background: var(--logoutModalButtonBg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 70px;
+  aspect-ratio: 1;
+  display: grid;
+  grid: 50%/50%;
+  color: #711ade;
+  --_g: no-repeat linear-gradient(currentColor 0 0);
+  background: var(--_g), var(--_g), var(--_g);
+  background-size: 50.1% 50.1%;
+  animation: l6-0 1.5s infinite steps(1) alternate, l6-0-0 3s infinite steps(1);
+}
+.loader::before {
+  content: "";
+  background: currentColor;
+  transform: perspective(150px) rotateY(0deg) rotateX(0deg);
+  transform-origin: bottom right;
+  animation: l6-1 1.5s infinite linear alternate;
+}
+@keyframes l6-0 {
+  0% {
+    background-position: 0 100%, 100% 100%, 100% 0;
+  }
+  33% {
+    background-position: 100% 100%, 100% 100%, 100% 0;
+  }
+  66% {
+    background-position: 100% 0, 100% 0, 100% 0;
+  }
+}
+@keyframes l6-0-0 {
+  0% {
+    transform: scaleX(1) rotate(0deg);
+  }
+  50% {
+    transform: scaleX(-1) rotate(-90deg);
+  }
+}
+@keyframes l6-1 {
+  16.5% {
+    transform: perspective(150px) rotateX(-90deg) rotateY(0deg) rotateX(0deg);
+    filter: grayscale(0.8);
+  }
+  33% {
+    transform: perspective(150px) rotateX(-180deg) rotateY(0deg) rotateX(0deg);
+  }
+  66% {
+    transform: perspective(150px) rotateX(-180deg) rotateY(-180deg)
+      rotateX(0deg);
+  }
+  100% {
+    transform: perspective(150px) rotateX(-180deg) rotateY(-180deg)
+      rotateX(-180deg);
+    filter: grayscale(0.8);
+  }
+}

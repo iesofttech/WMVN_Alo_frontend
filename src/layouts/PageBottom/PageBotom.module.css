@@ -1,0 +1,264 @@
+.container {
+  width: 100%;
+  /* height: 883px; */
+  margin: 0 auto;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  overflow: hidden;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+.logoContainer {
+  /* max-width: 127px; */
+  max-width: 50px;
+  max-height: 25px;
+  width: 100%;
+  height: 100%;
+}
+.contentWrapper {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  gap: 25px;
+  margin: 0 10px;
+}
+.paySocialContainer {
+  width: 100%;
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: space-between; */
+  padding: 0 20px 0 0;
+  box-sizing: border-box;
+  margin: 30px 0 10px 0;
+}
+
+.paySocialSubContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  /* margin-bottom: 20px; */
+}
+
+.paymentMethodsTitleStyling {
+  /* text-align: center; */
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: Kanit;
+  letter-spacing: 0;
+  color: #ffffff;
+  opacity: 1;
+  /* margin-top: 20px; */
+}
+
+.payMethodsStyle {
+  /* width: 561px; */
+  width: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  gap: 5px;
+}
+
+.paymentIconContainer {
+  max-width: 30px;
+  max-height: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.paymentMethodImg {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  object-fit: contain;
+}
+
+.followUsTitleStyling {
+  /* text-align: center; */
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: Kanit;
+  letter-spacing: 0;
+  color: #ffffff;
+  opacity: 1;
+  /* margin-top: 10px; */
+}
+
+.followUsStyle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.socialIconContainer {
+  max-width: 35px;
+  max-height: 35px;
+  width: 100%;
+  height: 100%;
+}
+
+.followUsImg {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  object-fit: contain;
+}
+
+.divider {
+  width: 100%;
+  height: 0px;
+  stroke-width: 1px;
+  stroke: #6f6f6f;
+  opacity: 1;
+}
+
+.productsTextStyling {
+  /* text-align: center; */
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: Kanit;
+  letter-spacing: 0;
+  color: #ffffff;
+  opacity: 1;
+  /* margin-bottom: 5px; */
+}
+
+.productsorAboutDiv {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; */
+  gap: 20px;
+}
+
+.productorAboutUsLinkStyling {
+  width: 42px;
+  height: 17px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 30px;
+  font-family: Kanit;
+  letter-spacing: 0;
+  color: #a499e8;
+  opacity: 1;
+}
+
+.logoResponsibleContainer {
+  width: 100%;
+  display: flex;
+  /* padding: 0 20px 0 0; */
+  box-sizing: border-box;
+  justify-content: space-between;
+  margin-top: 20px;
+  /* margin-bottom: 25px; */
+  /* gap: 5px; */
+}
+
+.logoResponsibleSubContainer {
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.aboutPara p {
+  /* UI Properties */
+  text-align: left;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: Kanit;
+  letter-spacing: 0;
+  color: #989898;
+  opacity: 1;
+  max-width: 226px;
+  width: 100%;
+}
+
+.aboutPara2 p {
+  /* UI Properties */
+  text-align: left;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: Kanit;
+  letter-spacing: 0;
+  color: #989898;
+  opacity: 1;
+  /* max-width: 226px; */
+  width: 100%;
+}
+.aboutPara2 {
+  /* UI Properties */
+  text-align: left;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: Kanit;
+  letter-spacing: 0;
+  color: #989898;
+  opacity: 1;
+  /* max-width: 226px; */
+  width: 100%;
+}
+
+.copyRight {
+  width: 100%;
+  text-align: center;
+  font-family: Kanit;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  /* margin-bottom: 30px; */
+}
+
+.responsibleImgStyling {
+  max-width: 265px;
+  width: 100%;
+  max-height: 40px;
+  height: 100%;
+  margin-top: 10px;
+}
+
+@media (max-width: 423px) and (min-width: 300px) {
+  .productsorAboutDiv {
+    gap: 15px;
+  }
+  .productorAboutUsLinkStyling {
+    font-size: 14px;
+  }
+
+  .followUsTitleStyling {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
