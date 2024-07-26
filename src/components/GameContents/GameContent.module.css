@@ -14,16 +14,19 @@
     align-items: center;
     box-sizing: border-box;
     margin-top: 15px; */
+    max-width: 561px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 5px;
+    width: 100%;
     position: relative;
 }
 
 .gameWrapper {
-    /* width: 100%; */
+    width: 100%;
+    margin: auto;
     /* height: 233px; */
     background: url("../../assets//images/game-content/LiveArenaBG.png");
 }
@@ -61,10 +64,11 @@
     opacity: 1;
 } */
 
-/* .gameImage {
-    width: 100%;
+.gameImage {
+    /* width: 100%; */
     height: 100%;
-} */
+    padding: 0 10px;
+}
 
 .imageContainer {
     width: 100%;
@@ -72,6 +76,9 @@
     overflow: hidden;
     transition: 0.25s;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .imageContainer:hover {
