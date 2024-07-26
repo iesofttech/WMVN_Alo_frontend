@@ -1,13 +1,40 @@
+:root {
+  --lightColor: #e2f8ff;
+  --darkColor: #041347;
+  --borderColor: #294056;
+  --goldColor: #ffdf61;
+  --borderRadius: 26px;
+  --orangeColor: #c79353;
+  --redColor: #ff5746;
+  --btnRadius: 28px;
+  --modalRadius: 13px;
+  --bgPrimaryColor: #211d39;
+  --loginButtonsColor: linear-gradient(180deg, #5158de 0%, #613ade 48.5%, #701ede 100%, #711ade 100%);
+  --loginButtonShadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.45), 0px 1px 1px 0px #8787f1 inset;
+  --loginInputBoxBg: #1a172e;
+  --loginInputBoxBorder: 0.3px solid #7f72c6;
+  --loginToggleButtonBg: transparent linear-gradient(180deg, #5158de 0%, #613ade 48%, #711ade 100%) 0% 0% no-repeat
+    padding-box;
+  --footerIconWidth: 35px;
+  --footerIconHeight: 36px;
+  --buttonWhiteTextColor: #ffffff;
+  --modalBgColor: #0A151F;
+  --logoutModalButtonBg: transparent linear-gradient(180deg, #262141 0%, #000326 100%) 0% 0% no-repeat padding-box;
+  --disabledBtnTextColor: #2d2d2d;
+}
+
+/* how to use */
+.example {
+  color: var(--lightColor);
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Kanit', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Kanit", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }

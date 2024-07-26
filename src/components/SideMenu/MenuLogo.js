@@ -6,7 +6,7 @@ const MenuLogo = ({ drawerOpened, setDrawerOpened }) => {
   return (
     <Drawer
       closable={false}
-      placement="right"
+      placement="left"
       open={drawerOpened}
       onClose={() => setDrawerOpened(false)}
       className={`${styles.drawerWrapper} drawer-custom-transition`}

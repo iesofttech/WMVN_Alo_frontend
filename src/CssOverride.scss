@@ -101,163 +101,163 @@
 /*-------------------add payment methods---------------*/
 
 .add-payment-methods {
-  // .ant-select {
-  //   height: 50px;
-  //   border: 1px solid #3c3562;
-  //   border-radius: 7px;
-  //   border: 1px solid #3c3562;
-  //   opacity: 1;
-  // }
+  .ant-select {
+    height: 50px;
+    border: 1px solid #3c3562;
+    border-radius: 7px;
+    border: 1px solid #3c3562;
+    opacity: 1;
+  }
 
-  // .ant-select-selector {
-  //   background: #000326 0% 0% no-repeat padding-box !important;
-  //   border: none !important;
-  //   text-align: left;
-  //   font-family: Kanit;
-  //   font-size: 16px;
-  //   font-weight: normal;
-  //   line-height: 19px;
-  //   letter-spacing: 0px;
-  //   color: #ffffff;
-  //   opacity: 1;
-  // }
+  .ant-select-selector {
+    background: #000326 0% 0% no-repeat padding-box !important;
+    border: none !important;
+    text-align: left;
+    font-family: Kanit;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 19px;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+  }
 
-  // .ant-select-selection-placeholder {
-  //   text-align: left;
-  //   font-family: Kanit;
-  //   font-size: 16px;
-  //   font-weight: medium;
-  //   line-height: 19px;
-  //   letter-spacing: 0px;
-  //   color: #574f85;
-  //   opacity: 1;
-  // }
+  .ant-select-selection-placeholder {
+    text-align: left;
+    font-family: Kanit;
+    font-size: 16px;
+    font-weight: medium;
+    line-height: 19px;
+    letter-spacing: 0px;
+    color: #574f85;
+    opacity: 1;
+  }
 
-  // .ant-select-arrow {
-  //   color: white;
-  // }
+  .ant-select-arrow {
+    color: white;
+  }
 }
 
 /*-------------------Transactions Section---------------*/
-// .ant-picker-input {
-//   input::placeholder {
-//     color: #574f85 !important;
-//     text-align: left;
-//     font-family: Kanit;
-//     font-size: 16px;
-//     font-weight: medium;
-//     line-height: 19px;
-//     letter-spacing: 0px;
-//     color: #574f85;
-//     opacity: 1;
-//   }
-// }
+.ant-picker-input {
+  input::placeholder {
+    color: #574f85 !important;
+    text-align: left;
+    font-family: Kanit;
+    font-size: 16px;
+    font-weight: medium;
+    line-height: 19px;
+    letter-spacing: 0px;
+    color: #574f85;
+    opacity: 1;
+  }
+}
 
-// .ant-picker-input:nth-child(2) {
-//   background-color: red !important;
-// }
-//  .ant-picker-outlined .css-dev-only-do-not-override-zl9ks2 {
-//   background-color: white !important;
-// }
+.ant-picker-input:nth-child(2) {
+  background-color: red !important;
+}
+ .ant-picker-outlined .css-dev-only-do-not-override-zl9ks2 {
+  background-color: white !important;
+}
 
-// .ant-picker-range {
-//   color: #574f85 !important;
-//   // background-color: white !important;
-//   // background-color: red;
-// }
-// .ant-picker-separator .anticon svg {
-//   // width: 2em;
-//   // height: 2em;
-//   fill: #574f85;
-// }
+.ant-picker-range {
+  color: #574f85 !important;
+  // background-color: white !important;
+  // background-color: red;
+}
+.ant-picker-separator .anticon svg {
+  // width: 2em;
+  // height: 2em;
+  fill: #574f85;
+}
 
-// .ant-picker-suffix .anticon-calendar svg {
-//   fill: #574f85; /* Change the fill color to white */
-// }
+.ant-picker-suffix .anticon-calendar svg {
+  fill: #574f85; /* Change the fill color to white */
+}
 
-// .add-payment-phone {
-//   .ant-input {
-//     background: #000326 0% 0% no-repeat padding-box;
-//     border: 1px solid #3c3562;
-//     border-radius: 7px;
-//     opacity: 1;
-//     text-align: left;
-//     font-family: Kanit;
-//     font-size: 16px;
-//     font-weight: normal;
-//     line-height: 19px;
-//     letter-spacing: 0px;
-//     color: #ffffff;
-//     opacity: 1;
-//   }
+.add-payment-phone {
+  .ant-input {
+    background: #000326 0% 0% no-repeat padding-box;
+    border: 1px solid #3c3562;
+    border-radius: 7px;
+    opacity: 1;
+    text-align: left;
+    font-family: Kanit;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 19px;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+  }
 
-//   .ant-input::placeholder {
-//     text-align: left;
-//     font-family: Kanit;
-//     font-size: 16px;
-//     font-weight: medium;
-//     line-height: 19px;
-//     letter-spacing: 0px;
-//     color: #574f85;
-//     opacity: 1;
-//   }
-// }
+  .ant-input::placeholder {
+    text-align: left;
+    font-family: Kanit;
+    font-size: 16px;
+    font-weight: medium;
+    line-height: 19px;
+    letter-spacing: 0px;
+    color: #574f85;
+    opacity: 1;
+  }
+}
 
-// .ant-picker-panel-container {
-//   .ant-picker-presets {
-//     // min-height: 25rem !important;
-//   }
+.ant-picker-panel-container {
+  .ant-picker-presets {
+    // min-height: 25rem !important;
+  }
 
-//   @media (max-width: 700px) {
-//     overflow: scroll !important;
-//     height: 400px;
-//     width: 300px;
+  @media (max-width: 700px) {
+    overflow: scroll !important;
+    height: 400px;
+    width: 300px;
 
-//     .ant-picker-panel-layout {
-//       flex-direction: column !important;
+    .ant-picker-panel-layout {
+      flex-direction: column !important;
 
-//       .ant-picker-presets {
-//         max-width: 100% !important;
-//         min-height: 10rem !important;
-//       }
+      .ant-picker-presets {
+        max-width: 100% !important;
+        min-height: 10rem !important;
+      }
 
-//       .ant-picker-panels,
-//       .ant-picker-datetime-panel {
-//         flex-direction: column !important;
-//       }
-//     }
-//   }
+      .ant-picker-panels,
+      .ant-picker-datetime-panel {
+        flex-direction: column !important;
+      }
+    }
+  }
 
-//   @media (max-width: 360px) and (min-width: 337px) {
-//     overflow: scroll !important;
-//     height: 400px;
-//     width: 200px;
-//   }
-// }
+  @media (max-width: 360px) and (min-width: 337px) {
+    overflow: scroll !important;
+    height: 400px;
+    width: 200px;
+  }
+}
 
 /*----------Home media query----------*/
-// .category-grid {
-//   @media (max-width: 369px) {
-//     .ant-row {
-//       justify-content: center;
-//     }
+.category-grid {
+  @media (max-width: 369px) {
+    .ant-row {
+      justify-content: center;
+    }
 
-//     .scrollable-container .ant-row {
-//       justify-content: normal;
-//     }
-//   }
-// }
+    .scrollable-container .ant-row {
+      justify-content: normal;
+    }
+  }
+}
 
 /*-----------main-header----------*/
 
-// .ant-modal-content {
-//   box-shadow: none !important;
-// }
+.ant-modal-content {
+  box-shadow: none !important;
+}
 
-// // transaction modal
-// .parentClass .ant-modal-wrap {
-//   top: auto !important;
-// }
+// transaction modal
+.parentClass .ant-modal-wrap {
+  top: auto !important;
+}
 
 /*-----------pagination----------*/
 

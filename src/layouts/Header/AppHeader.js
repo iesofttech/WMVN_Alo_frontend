@@ -6,6 +6,7 @@ import CustomButton from "../../helpers/helperComponents/CustomButton";
 import sideMenuIcon from "../../assets/images/Menu.png";
 import MenuLogo from "../../components/SideMenu/MenuLogo";
 import BackButton from "../../assets/images/Back.png";
+import WalletIcon from "../../assets/images/header/Wallet.png";
 
 const AppHeader = () => {
   const location = useLocation();
@@ -114,11 +115,11 @@ const AppHeader = () => {
         <div className={styles.balanceMainHeader}>
           {userToken ? (
             <div className={styles.balanceExitContainer}>
-              <div
+              {/* <div
                 className={styles.notificationStyle}
                 style={{ marginTop: 5 }}
               >
-                {/* <Badge
+                <Badge
                   count={notificationCount}
                   style={{
                     backgroundColor: "#5158DE",
@@ -133,8 +134,8 @@ const AppHeader = () => {
                     alt="notification"
                     onClick={() => navigate("/notifications")}
                   />
-                </Badge> */}
-              </div>
+                </Badge>
+              </div> */}
               {/* <Link style={{ textDecoration: "none" }} to="/account">
                 <div className={styles.balanceCoinsContainer}>
                   <div className={styles.coinsStyle}>
@@ -172,6 +173,12 @@ const AppHeader = () => {
             </div>
           )}
           <div className={styles.imagesWrapper}>
+            <img
+              src={WalletIcon}
+              className={styles.sideMenuIconStyle}
+              alt="sideMenu"
+              // onClick={() => setDrawerOpened(true)}
+            />
             <MenuLogo
               drawerOpened={drawerOpened}
               setDrawerOpened={setDrawerOpened}

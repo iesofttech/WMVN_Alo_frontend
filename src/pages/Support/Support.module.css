@@ -1,0 +1,139 @@
+.supportWrapper {
+  color: var(--lightColor);
+  padding: 20px 30px;
+}
+
+.section1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  align-items: center;
+  /* height: 200px; */
+}
+
+.welcomeTextHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  gap: 5px;
+  width: 280px;
+  height: 200px;
+  margin-top: -30px;
+}
+
+.welcomeTextTitle {
+  text-align: left;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: medium;
+  font-size: 24px;
+  line-height: 29px;
+  font-family: Kanit;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.bw9Text {
+  color: #5158de;
+  font-style: italic;
+}
+.customerName {
+  /* color: var(--goldColor); */
+  font-style: italic;
+  font-weight: 400;
+}
+
+.welcomeTextSubTitle {
+  text-align: left;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: Kanit;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.imageHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+}
+.supportImage {
+  width: 100%;
+  height: 100%;
+  /* width: 146px;
+  height: 136px; */
+}
+
+.cards {
+  background-color: var(--modalBgColor);
+  border: 5px solid var(----borderColor);
+  margin-bottom: 10px;
+}
+
+.cardContent {
+  color: var(--lightColor);
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  height: fit-content;
+}
+
+.cardIconHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+}
+
+.cardIcon {
+  width: 100%;
+  height: 100%;
+}
+
+.cardTextHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 340px;
+}
+
+.cardTextTitle {
+  font-weight: 600;
+  text-align: left;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: Kanit;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.cardTextSubTitle {
+  font-size: 12px;
+}
+
+.arrowIconHolder {
+  width: 14px;
+  opacity: 1;
+}
+
+.ArrowIcon {
+  width: 100%;
+  height: 100%;
+}

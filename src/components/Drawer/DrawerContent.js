@@ -33,12 +33,12 @@ const links = [
   //   inactive_icon: InActiveDeposit,
   //   active_icon: ActiveDeposit,
   // },
-  // {
-  //   id: "/withdraw",
-  //   label: "Withdraw",
-  //   inactive_icon: InActiveWithdraw,
-  //   active_icon: ActiveWithdraw,
-  // },
+  {
+    id: "/support",
+    label: "Support",
+    inactive_icon: InactiveHome,
+    active_icon: InactiveHome,
+  },
 ];
 
 const DrawerContent = ({ onClose }) => {

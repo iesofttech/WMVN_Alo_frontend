@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import Login from "./pages/auth/Login/Login";
 import Register from "./pages/auth/Register/Register";
+import Support from "./pages/Support/Support";
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          {/* <Route path="/support" element={<Support />} />
-        <Route path="*" element={<PageNotFound />} />
+          <Route path="/support" element={<Support />} />
+          {/* <Route path="*" element={<PageNotFound />} />
         <Route path="/games/:name" element={<Games />} />
         <Route path="/promotions" element={<Bonus />} />
         <Route path="/about-us" element={<AboutUs />} />
