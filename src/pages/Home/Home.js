@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HomeBar from "../../components/HomeBar/HomeBar";
 import GameCategories from "../../components/GameCategory/GameCategories";
 import LiveArenaIcon from "../../assets/images/game-categories/COCKFIGHT.png";
@@ -10,13 +10,18 @@ import FishingIcon from "../../assets/images/game-categories/FH.png";
 import SlotsIcon from "../../assets/images/game-categories/SLOT.png";
 import Carousel from "../../components/Carousel/Carousel";
 import Banner1 from "../../assets/images/carousel-banner/Banner.png";
-import GameContnents from "../../components/GameContents/GameContnents";
+import GameContents from "../../components/GameContents/GameContents";
+import CockFightingImage from "../../assets/images/game-content/GameCockfight.png";
+import Sports1 from "../../assets/images/game-content/games/Sports1.png";
+import Sports2 from "../../assets/images/game-content/games/Sports2.png";
+import bgLiveArena from "../../assets/images/game-content/LiveArenaBG.png";
+import bgSports from "../../assets/images/game-content/SportsBG.png";
 
 const Home = () => {
   const [isLoading, setIsloading] = useState(false);
-  const [activeCatId, setActiveCatId] = useState();
+  const [activeCatId, setActiveCatId] = useState(1);
   const banners = [Banner1, Banner1];
-
+  const [games, setGames] = useState();
   const gameCategories = [
     {
       id: 1,
@@ -54,12 +59,50 @@ const Home = () => {
       image: SlotsIcon,
     },
   ];
+
+  useEffect(() => {
+    if (activeCatId === 1) {
+      setGames({
+        id: 1,
+        bgImage: bgLiveArena,
+        title: "Live Arena",
+        icon: LiveArenaIcon,
+        gameItems: [
+          {
+            id: 1,
+            name: "Cock Fighting",
+            image: CockFightingImage,
+          },
+        ],
+      });
+    } else if (activeCatId === 2) {
+      setGames({
+        id: 2,
+        bgImage: bgSports,
+        title: "Sports",
+        icon: SportsIcon,
+        gameItems: [
+          {
+            id: 1,
+            name: "Sbobet",
+            image: Sports1,
+          },
+          {
+            id: 2,
+            name: "bong88",
+            image: Sports2,
+          },
+        ],
+      });
+    }
+  }, [activeCatId]);
+
   return (
     <div
       style={{
-        height: "auto",
-        maxWidth: "561px",
-        width: "100%",
+        // height: "auto",
+        // maxWidth: "561px",
+        // width: "100%",
         background: "#0A151F 0% 0% no-repeat padding-box",
       }}
     >
@@ -71,22 +114,7 @@ const Home = () => {
         gameCategories={gameCategories}
       />
       <Carousel banners={banners} />
-      <GameContnents />
-      {/* <div
-        style={{
-          height: "63px",
-          maxWidth: "561px",
-          width: "100%",
-          flexShrink: 0,
-          background: "#0A151F 0% 0% no-repeat padding-box",
-          zIndex: 1000,
-          position: "fixed",
-          display: "flex",
-          color: "#ffffff",
-        }}
-      >
-        Home
-      </div> */}
+      <GameContents activeCatId={activeCatId} games={games} />
     </div>
   );
 };

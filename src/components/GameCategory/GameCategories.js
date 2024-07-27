@@ -9,7 +9,6 @@ const GameCategories = ({
   isLoading,
   gameCategories,
 }) => {
-  console.log(gameCategories);
   return (
     <div className={styles.categories}>
       {isLoading ? (
