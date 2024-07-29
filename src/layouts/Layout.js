@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
     pathname.includes("games") ||
     pathname === "/" ||
     pathname === "/login" ||
-    pathname === "/register" ||
+    pathname === "/register" || //check
     pathname === "/promotions" ||
     pathname === "/account/ewallet" ||
     pathname === "/account/transactions" ||
@@ -50,8 +50,6 @@ const Layout = ({ children }) => {
 
     return () => clearTimeout(timer);
   }, [showloading]);
-
-
 
   // get user info
   // useEffect(() => {
@@ -81,9 +79,20 @@ const Layout = ({ children }) => {
     width: "auto",
   };
 
-
   return (
-    <div className={`mainLayoutWrapper ${style.wrapper}`}>
+    <div className={`mainLayoutWrapper ${style.wrapper}`} style={{ background: "transparent linear-gradient(155deg, #200C01 0%, #5B1D01 49%, #010101 100%) 0% 0% no-repeat padding-box"}}>
+      <h2 style={{ 
+        font: 'normal normal 300 30px/45px Kanit', 
+        letterSpacing: '0px',
+        color: '#FFFFFF',
+        // backgroundColor: '#6E1F10',
+        // padding: '10px 20px',
+        // borderRadius: '15px 15px 0 0',
+        // margin: '-20px -20px 20px -20px'
+      }}>
+        <img src="path/to/icon.png" alt="icon" style={{ marginRight: '10px' }} /> Register Form
+      </h2>
+
       {/* {showloading && <HomePageLoader show={showloading} />} */}
       {pathName && <AppHeader />}
       <main className={style.content} style={pathName ? {} : notFoundStyle}>
