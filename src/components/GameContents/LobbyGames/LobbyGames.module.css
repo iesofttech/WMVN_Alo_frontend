@@ -7,7 +7,7 @@
     margin-top: 3%;
     border-radius: 10px;
     /* background: url("../../../assets//images/game-content/LiveArenaBG.png"); */
-    padding: 5px 10px;
+    /* padding: 5px 10px; */
 }
 
 .gameList {
@@ -20,7 +20,7 @@
 }
 
 .gameItems {
-    /* display: flex; */
+    display: flex;
     /* justify-content: center;
     align-items: center; */
 }
