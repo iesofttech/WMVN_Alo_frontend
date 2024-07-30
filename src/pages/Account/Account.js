@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Account.module.css";
+import copy from 'copy-to-clipboard'; 
 import { Avatar, Divider, Progress, Tooltip, Typography } from "antd";
 import DepositIcon from "../../assets/images/account-page/Deposit.png";
 import WithdrawalIcon from "../../assets/images/account-page/Withdrawal.png";
@@ -67,6 +68,12 @@ const Account = () => {
     { id: "logout", label: "Logout", link: "", icon: LogOutIcon },
   ];
 
+  const handleCopyClick = () => { 
+    const textToCopy = "Ravi-Dev"; 
+    copy(textToCopy); 
+  }; 
+ 
+
   return ( 
     <div className={styles.container}> 
       <div className={styles.accountProfileBlur}> 
@@ -91,7 +98,7 @@ const Account = () => {
  
                 <div> 
                   <img 
-                    // onClick={handleCopyClick} 
+                    onClick={handleCopyClick} 
                     className={styles.imgStyle} 
                     style={{ cursor: "pointer", marginLeft: "2%" }} 
                     src={copyIcon} 
