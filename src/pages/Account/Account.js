@@ -238,8 +238,8 @@ const Account = () => {
                 src={item.icon} 
                 alt={item.label} 
                 style={{ 
-                  maxWidth: "50%", 
-                  maxHeight: "50%", 
+                  maxWidth: "60%", 
+                  maxHeight: "60%", 
                 }} 
               /> 
             </div> 
