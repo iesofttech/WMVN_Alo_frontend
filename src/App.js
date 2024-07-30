@@ -8,6 +8,8 @@ import store from "./redux/store";
 import Login from "./pages/auth/Login/Login";
 import Register from "./pages/auth/Register/Register";
 import Support from "./pages/Support/Support";
+import { privateRoutes } from "./routes/PrivateRoutes";
+import PrivateRoute from "./routes/PrivateRoute";
 
 function App() {
   return (
@@ -27,13 +29,14 @@ function App() {
         <Route path="/responsible-gaming" element={<ResponsibleGaming />} />
 
         <Route path="/promotions/:id" element={<SinglePromotionDetails />} />
-        {privateRoutes.map((route) => (
-          <Route
-            key={route.id}
-            path={route.path}
-            element={<PrivateRoute component={route.component} />}
-          />
-        ))} */}
+        */}
+          {privateRoutes.map((route) => (
+            <Route
+              key={route.id}
+              path={route.path}
+              element={<PrivateRoute component={route.component} />}
+            />
+          ))}
         </Routes>
       </Layout>
     </Provider>

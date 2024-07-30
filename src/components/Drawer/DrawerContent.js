@@ -21,12 +21,12 @@ const links = [
   //   inactive_icon: InactivePromotion,
   //   active_icon: ActivePromotion,
   // },
-  // {
-  //   id: "/account",
-  //   label: "Account",
-  //   inactive_icon: InactiveAccount,
-  //   active_icon: ActiveAccount,
-  // },
+  {
+    id: "/account",
+    label: "Account",
+    inactive_icon: InactiveHome,
+    active_icon: InactiveHome,
+  },
   // {
   //   id: "/deposit",
   //   label: "Deposit",
@@ -63,7 +63,7 @@ const DrawerContent = ({ onClose }) => {
               width: "50%",
               height: "100%",
               objectFit: "contain",
-              background:"#172634 0% 0% no-repeat padding-box",
+              background: "#172634 0% 0% no-repeat padding-box",
               // background:
               //   "transparent url('../../Assets/BESTWAY9 Logo.png') 0% 0% no-repeat padding-box",
               opacity: 1,
