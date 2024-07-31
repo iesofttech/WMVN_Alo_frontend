@@ -7,6 +7,8 @@ import sideMenuIcon from "../../assets/images/Menu.png";
 import MenuLogo from "../../components/SideMenu/MenuLogo";
 import BackButton from "../../assets/images/Back.png";
 import WalletIcon from "../../assets/images/header/Wallet.png";
+import { Modal } from "antd";
+import Login from "../../components/LogIn/Login";
 
 const AppHeader = () => {
   const location = useLocation();
@@ -15,6 +17,7 @@ const AppHeader = () => {
   // const userToken = useSelector((state) => state.user.user);
   const userToken = "";
   const [drawerOpened, setDrawerOpened] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const promotionTitle = location.state?.promotionTitle;
   const segments = pathname.split("/");
@@ -23,6 +26,18 @@ const AppHeader = () => {
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div
@@ -164,9 +179,13 @@ const AppHeader = () => {
             </div>
           ) : (
             <div className={styles.buttonsContainer}>
-              <Link to="/login">
-                <CustomButton text="Login" type={styles.appHeaderLoginBtn} />
-              </Link>
+              {/* <Link to="/login"> */}
+              <CustomButton
+                text="Login"
+                type={styles.appHeaderLoginBtn}
+                onClick={showModal}
+              />
+              {/* </Link> */}
               <Link to="/register">
                 <CustomButton text="Sign up" type={styles.appHeaderSinupBtn} />
               </Link>
@@ -205,6 +224,19 @@ const AppHeader = () => {
           closeLogoutModal={() => setLogoutModal(false)}
         />
       )} */}
+      <Modal
+        centered
+        open={isModalOpen}
+        onCancel={handleCancel}
+        footer={null} // This hides the footer with OK and Cancel buttons
+        // closable={false} // This hides the close button (the "x" in the top right corner)
+        // styles={{
+        //   // body: { backgroundColor: "red" },
+        //   // border: "1px solid yellow",
+        // }}
+      >
+        <Login close={handleCancel}/>
+      </Modal>
     </div>
   );
 };
