@@ -1,79 +1,220 @@
-import React from 'react';
-import { Form, Input, Button } from 'antd';
-import { UserOutlined, LockOutlined, MailOutlined, PhoneOutlined, HomeOutlined } from '@ant-design/icons';
+import React from "react";
+import { Form, Input, Button } from "antd";
+import {
+  UserOutlined,
+  LockOutlined,
+  MailOutlined,
+  PhoneOutlined,
+  HomeOutlined,
+} from "@ant-design/icons";
+import styles from "./Register.module.css"; // Import the CSS module
 
 const Register = () => {
+  // Function to handle form submission
+  const onFinish = (values) => {
+    console.log('Form values:', values);
+    // Handle the form values here
+  };
+
+  // Function to handle form submission failure
+  const onFinishFailed = (errorInfo) => {
+    console.log('Form submission failed:', errorInfo);
+  };
+
   return (
-    <div style={{ 
-      background: '#FFFFFF',
-      padding: '20px',
-      borderRadius: '15px',
-      width: '350px',
-      margin: 'auto',
-      marginTop: '50px',
-      boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
-    }}>
-     
+    <div className={styles.container}>
       <Form
         name="register"
         initialValues={{ remember: true }}
-        style={{ textAlign: 'left' }}
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
       >
-        <Form.Item
-          name="contactName"
-          label="Contact Name :"
-          labelCol={{ span: 24 }}
-          style={{ marginBottom: '15px' }}
-        >
-          <span style={{ fontWeight: 'bold', color: '#6E1F10' }}>SV388</span>
+        <Form.Item className={styles.formItem}>
+          <span className={styles.label}>Contact Name:</span>
+          <span className={styles.labelHighlighted}> SV388</span>
         </Form.Item>
+
         <Form.Item
           name="loginName"
-          rules={[{ required: true, message: 'Please input your login name!' }]}
+          className={styles.inputGroup}
+          rules={[
+            {
+              required: true,
+              type: "regexp",
+              pattern: new RegExp("[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"),
+              message: 'Please enter a valid existing channel ID',
+            },
+            
+          ]}
         >
-          <Input prefix={<UserOutlined />} placeholder="Contain a-z, 0-9, 4-20 characters" />
+          <div className={styles.inputLabel}>Login Name</div>
+          <div className={styles.inputWrapper}>
+            <div className={styles.iconWrapper}>
+              <UserOutlined style={{ color: "black" }} />
+            </div>
+            <Input
+              placeholder="8-12 characters, letters and numbers only"
+              className={styles.input}
+            />
+          </div>
         </Form.Item>
+
         <Form.Item
           name="fullName"
-          rules={[{ required: true, message: 'Please input your full name!' }]}
+          className={styles.inputGroup}
+          rules={[
+            {
+              required: true,
+              message: 'Full Name is required',
+              whitespace: true,
+            },
+          ]}
         >
-          <Input placeholder="Full Name" />
+          <div className={styles.inputLabel}>Full Name</div>
+          <div className={styles.inputWrapper}>
+            <Input
+              placeholder="Full Name"
+              className={styles.input}
+            />
+          </div>
         </Form.Item>
+
         <Form.Item
           name="password"
-          rules={[{ required: true, message: 'Please input your password!' }]}
+          className={styles.inputGroup}
+          rules={[
+            {
+              required: true,
+              min: 8,
+              max: 15,
+              message: 'Password must be between 8 and 15 characters.',
+            },
+            {
+              pattern: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,15}$/,
+              message: 'Password must contain letters and numbers.',
+            },
+          ]}
         >
-          <Input.Password prefix={<LockOutlined />} placeholder="Contain A-z, 0-9, 8-15 characters" />
+          <div className={styles.inputLabel}>Password</div>
+          <div className={styles.inputWrapper}>
+            <div className={styles.iconWrapper}>
+              <LockOutlined style={{ fontSize: "18px", color: "#BFBFBF" }} />
+            </div>
+            <Input.Password
+              placeholder="8-15 characters, letters and numbers"
+              className={styles.input}
+            />
+          </div>
         </Form.Item>
+
         <Form.Item
           name="confirmPassword"
-          rules={[{ required: true, message: 'Please confirm your password!' }]}
+          className={styles.inputGroup}
+          rules={[
+            {
+              required: true,
+              message: 'Please confirm your password!',
+            },
+            ({ getFieldValue }) => ({
+              validator(_, value) {
+                if (!value || getFieldValue("password") === value) {
+                  return Promise.resolve();
+                }
+                return Promise.reject(new Error("The two passwords that you entered do not match!"));
+              },
+            }),
+          ]}
         >
-          <Input.Password prefix={<LockOutlined />} placeholder="Input Password again" />
+          <div className={styles.inputLabel}>Confirm Password</div>
+          <div className={styles.inputWrapper}>
+            <div className={styles.iconWrapper}>
+              <LockOutlined style={{ fontSize: "18px", color: "#BFBFBF" }} />
+            </div>
+            <Input.Password
+              placeholder="Confirm your password"
+              className={styles.input}
+            />
+          </div>
         </Form.Item>
+
         <Form.Item
           name="phoneNumber"
-          rules={[{ required: true, message: 'Please input your phone number!' }]}
+          className={styles.inputGroup}
+          rules={[
+            {
+              required: true,
+              message: 'Phone Number is required',
+            },
+            {
+              pattern: /^[\d\s\+\-]{10,15}$/,
+              message: 'Enter a valid phone number.',
+            },
+          ]}
         >
-          <Input prefix={<PhoneOutlined />} addonBefore={<img src="path/to/flag.png" alt="flag" style={{ width: '20px' }} />} placeholder="91 234 56 78" />
+          <div className={styles.inputLabel}>Phone Number</div>
+          <div className={styles.inputWrapper}>
+            <div className={styles.iconWrapper}>
+              <PhoneOutlined style={{ fontSize: "18px", color: "#BFBFBF" }} />
+            </div>
+            <Input
+              placeholder="91 234 56 78"
+              addonBefore={
+                <img
+                  src="path/to/flag.png"
+                  alt="flag"
+                  style={{ width: "20px", marginRight: "5px" }}
+                />
+              }
+              className={styles.input}
+            />
+          </div>
         </Form.Item>
+
         <Form.Item
           name="email"
-          rules={[{ required: true, message: 'Please input your email!' }]}
+          className={styles.inputGroup}
+          rules={[
+            {
+              required: true,
+              message: 'Email is required',
+            },
+            {
+              type: 'email',
+              message: 'Please enter a valid email address.',
+            },
+          ]}
         >
-          <Input prefix={<MailOutlined />} placeholder="Enter your email" />
+          <div className={styles.inputLabel}>Email</div>
+          <div className={styles.inputWrapper}>
+            <div className={styles.iconWrapper}>
+              <MailOutlined style={{ fontSize: "18px", color: "#BFBFBF" }} />
+            </div>
+            <Input placeholder="Enter your email" className={styles.input} />
+          </div>
         </Form.Item>
+
         <Form.Item>
-          <Button type="primary" htmlType="submit" style={{ width: '100%', marginBottom: '10px', backgroundColor: '#FFA500', borderColor: '#FFA500' }}>
+          <Button type="primary" htmlType="submit">
             Submit
           </Button>
-          <Button type="link" style={{ width: '100%' }}>
+        </Form.Item>
+
+        <Form.Item style={{ textAlign: "center", marginBottom: "20px" }}>
+          <Button type="link" className={styles.buttonLink}>
             <HomeOutlined />
           </Button>
         </Form.Item>
-        <div style={{ fontSize: '12px', textAlign: 'left', color: '#6E1F10' }}>
-          <p>By clicking "Submit", you agree to GA368 Terms of Use and Privacy Policy.</p>
-          <p>You consent to receive phone call, SMS, and email messages from GA368 to provide updates on your order and/or for marketing purposes.</p>
+
+        <div className={styles.footer}>
+          <p>
+            By clicking "Submit", you agree to GA368 Terms of Use and Privacy
+            Policy.
+          </p>
+          <p>
+            You consent to receive phone call, SMS, and email messages from
+            GA368 to provide updates on your order and/or for marketing
+            purposes.
+          </p>
         </div>
       </Form>
     </div>
