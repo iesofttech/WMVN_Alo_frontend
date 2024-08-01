@@ -1,16 +1,18 @@
 import Account from "../pages/Account/Account";
+import Deposit from "../pages/Transfer_money/Deposit/Deposit";
+import Withdraw from "../pages/Transfer_money/Withdraw/Withdraw";
 
 export const privateRoutes = [
-  // {
-  //   id: 1,
-  //   path: '/deposit',
-  //   component: Deposit,
-  // },
-  // {
-  //   id: 2,
-  //   path: '/withdraw',
-  //   component: Withdraw,
-  // },
+  {
+    id: 1,
+    path: '/deposit',
+    component: Deposit,
+  },
+  {
+    id: 2,
+    path: '/withdraw',
+    component: Withdraw,
+  },
   // {
   //   id: 3,
   //   path: '/account/transactions',
