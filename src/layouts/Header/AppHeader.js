@@ -179,13 +179,12 @@ const AppHeader = () => {
             </div>
           ) : (
             <div className={styles.buttonsContainer}>
-              {/* <Link to="/login"> */}
               <CustomButton
                 text="Login"
                 type={styles.appHeaderLoginBtn}
                 onClick={showModal}
               />
-              {/* </Link> */}
+
               <Link to="/register">
                 <CustomButton text="Sign up" type={styles.appHeaderSinupBtn} />
               </Link>
@@ -235,7 +234,7 @@ const AppHeader = () => {
         //   // border: "1px solid yellow",
         // }}
       >
-        <Login close={handleCancel}/>
+        <Login close={handleCancel} />
       </Modal>
     </div>
   );

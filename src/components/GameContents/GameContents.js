@@ -1,12 +1,16 @@
 import React from "react";
 import styles from "./GameContent.module.css";
 import LobbyGames from "./LobbyGames/LobbyGames";
-import LiveArenaIcon from "../../assets/images/game-categories/COCKFIGHT.png";
+import HotTableGames from "./HotTable/HotTableGames";
 
 const GameContents = ({ activeCatId, games }) => {
   return (
     <div className={styles.paddingWrapper}>
-      <LobbyGames games={games} />
+      {activeCatId === 3 ? (
+        <HotTableGames games={games} />
+      ) : (
+        <LobbyGames games={games} />
+      )}
     </div>
   );
 };
