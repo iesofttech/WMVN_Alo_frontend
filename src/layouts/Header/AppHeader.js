@@ -8,7 +8,7 @@ import MenuLogo from "../../components/SideMenu/MenuLogo";
 import BackButton from "../../assets/images/Back.png";
 import WalletIcon from "../../assets/images/header/Wallet.png";
 import { Modal } from "antd";
-import Login from "../../pages/auth/Login/Login";
+import Login from "../../pages/auth/Login/Login.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import { closeModal, openModal } from "../../redux/Slice/modalSlice";
 
