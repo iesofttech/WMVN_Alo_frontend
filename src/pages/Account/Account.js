@@ -22,7 +22,6 @@ const Account = () => {
   const current = 0; 
   const total = levelData?.max; 
   const percent = (current / total) * 100; 
-  const [refreshLoader, setRefreshLoader] = useState(false); 
 
   const accountCategoryData = [
     { id: "deposit", 
@@ -59,12 +58,6 @@ const Account = () => {
       // link: "/notifications",
       icon: NotificationsIcon,
     },
-    // {
-    //   id: "inviteFriend",
-    //   label: "Invite Friend",
-    //   link: "invite-friend",
-    //   icon: InviteFriend,
-    // },
     { id: "logout", label: "Logout", link: "", icon: LogOutIcon },
   ];
 
@@ -78,13 +71,10 @@ const Account = () => {
     <div className={styles.container}> 
       <div className={styles.accountProfileBlur}> 
           <div className={styles.accountProfile}> 
-            <div 
-            // style={{ border: "3px solid #be8aff", borderRadius: "50%" }} 
-            > 
+            <div> 
               <Avatar 
                 size={60} 
                 src={<img src={ProfileIcon} alt="avatar" />} 
-                // src={<img src={userInfoReduxData?.profile_pic} alt="avatar" />} 
               /> 
             </div> 
  
@@ -100,7 +90,7 @@ const Account = () => {
                   <img 
                     onClick={handleCopyClick} 
                     className={styles.imgStyle} 
-                    style={{ cursor: "pointer", marginLeft: "2%" }} 
+                    style={{cursor: "pointer", marginLeft: "2%" }} 
                     src={copyIcon} 
                     alt="CopyIcon" 
                   /> 
@@ -125,13 +115,12 @@ const Account = () => {
                   </> 
               </div> 
             </div> 
- 
-            {/* Progress Bar */} 
+
             <div style={{ width: "100%" }}> 
               <div className={styles.levelStyle}> 
-                <img style={{ width: "7%" }} src={CrownIcon} alt="CrownIcon" /> 
+                <img style={{ width: "27px"}} src={CrownIcon} alt="CrownIcon" /> 
                 <Typography.Text className={styles.levelNameStyle}> 
-                  {`Level 1`} 
+                  {`Level 1`}
                 </Typography.Text> 
               </div> 
  
@@ -195,28 +184,13 @@ const Account = () => {
       <div 
         style={{ 
           display: "grid", 
-          gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr))", // Adjust the column width as needed 
+          gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr))", 
           gap: "20px", 
         }} 
       > 
         {accountCategoryData.map((item) => ( 
           <div 
             key={item.id} 
-            // onClick={() => { 
-            //   if (item.id === "logout") { 
-            //     // setLogoutModal(true); 
-            //   } else if (item.id === "depositRecord") { 
-            //     navigate("/account/transactions", { 
-            //       state: { active: "deposit" }, 
-            //     }); 
-            //   } else if (item.id === "withdrawalRecord") { 
-            //     navigate("/account/transactions", { 
-            //       state: { active: "withdraw" }, 
-            //     }); 
-            //   } else { 
-            //     navigate(item.link); 
-            //   } 
-            // }} 
             style={{ 
               display: "flex", 
               flexDirection: "column", 
@@ -259,21 +233,9 @@ const Account = () => {
             > 
               {item.label} 
             </Typography.Text> 
-            {/* {item?.id ==='inviteFriend' && 
-            <Typography.Text 
-              className={styles.newtextStyle} 
-              style={{ 
-                textAlign:'center', 
-                margin:'auto' 
-              }} 
-            > 
-              NEW 
-            </Typography.Text> 
-            }  */}
           </div> 
         ))} 
       </div> 
- 
       {/* {logoutModal && ( 
         <LogoutConfirmationModal 
           logoutModal={logoutModal} 

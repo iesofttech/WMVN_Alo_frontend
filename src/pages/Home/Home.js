@@ -17,6 +17,12 @@ import Sports2 from "../../assets/images/game-content/games/Sports2.png";
 import bgLiveArena from "../../assets/images/game-content/LiveArenaBG.png";
 import bgSports from "../../assets/images/game-content/SportsBG.png";
 
+import HotTableGames1 from "../../assets/images/game-content/hot-table/HotTable1.png";
+import HotTableGames2 from "../../assets/images/game-content/hot-table/HotTable2.png";
+import HotTableGames3 from "../../assets/images/game-content/hot-table/HotTable3.png";
+import HotTableGames4 from "../../assets/images/game-content/hot-table/HotTable4.png";
+import bgHotTable from "../../assets/images/game-content/HotTableBG.png";
+
 const Home = () => {
   const [isLoading, setIsloading] = useState(false);
   const [activeCatId, setActiveCatId] = useState(1);
@@ -91,6 +97,35 @@ const Home = () => {
             id: 2,
             name: "bong88",
             image: Sports2,
+          },
+        ],
+      });
+    } else if (activeCatId === 3) {
+      setGames({
+        id: 2,
+        bgImage: bgHotTable,
+        title: "Casino",
+        icon: CasinoIcon,
+        gameItems: [
+          {
+            id: 1,
+            name: "SicBo1",
+            image: HotTableGames1,
+          },
+          {
+            id: 2,
+            name: "SicBo2",
+            image: HotTableGames2,
+          },
+          {
+            id: 3,
+            name: "SicBo3",
+            image: HotTableGames3,
+          },
+          {
+            id: 4,
+            name: "SicBo4",
+            image: HotTableGames4,
           },
         ],
       });

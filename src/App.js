@@ -5,7 +5,6 @@ import Layout from "./layouts/Layout";
 import Home from "./pages/Home/Home";
 import { Provider } from "react-redux";
 import store from "./redux/store";
-import Login from "./pages/auth/Login/Login";
 import Register from "./pages/auth/Register/Register";
 import Support from "./pages/Support/Support";
 import { privateRoutes } from "./routes/PrivateRoutes";
@@ -17,7 +16,6 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/support" element={<Support />} />
           {/* <Route path="*" element={<PageNotFound />} />
