@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import styles from "./AppHeader.module.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+
 import CustomButton from "../../helpers/helperComponents/CustomButton";
 import sideMenuIcon from "../../assets/images/Menu.png";
 import MenuLogo from "../../components/SideMenu/MenuLogo";
 import BackButton from "../../assets/images/Back.png";
 import WalletIcon from "../../assets/images/header/Wallet.png";
 import { Modal } from "antd";
-import Login from "../../components/LogIn/Login";
+import Login from "../../pages/auth/Login/Login";
+import { useSelector, useDispatch } from "react-redux";
+import { closeModal, openModal } from "../../redux/Slice/modalSlice";
 
 const AppHeader = () => {
   const location = useLocation();
@@ -17,7 +19,8 @@ const AppHeader = () => {
   // const userToken = useSelector((state) => state.user.user);
   const userToken = "";
   const [drawerOpened, setDrawerOpened] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const isModalOpen = useSelector((state) => state.modal.isOpen);
+  const dispatch = useDispatch();
 
   const promotionTitle = location.state?.promotionTitle;
   const segments = pathname.split("/");
@@ -28,15 +31,15 @@ const AppHeader = () => {
     .join(" ");
 
   const showModal = () => {
-    setIsModalOpen(true);
+    dispatch(openModal());
   };
 
   const handleOk = () => {
-    setIsModalOpen(false);
+    dispatch(closeModal());
   };
 
   const handleCancel = () => {
-    setIsModalOpen(false);
+    dispatch(closeModal());
   };
 
   return (
@@ -227,12 +230,8 @@ const AppHeader = () => {
         centered
         open={isModalOpen}
         onCancel={handleCancel}
-        footer={null} // This hides the footer with OK and Cancel buttons
-        // closable={false} // This hides the close button (the "x" in the top right corner)
-        // styles={{
-        //   // body: { backgroundColor: "red" },
-        //   // border: "1px solid yellow",
-        // }}
+        footer={null}
+        closable={false}
       >
         <Login close={handleCancel} />
       </Modal>

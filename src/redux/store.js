@@ -2,8 +2,10 @@ import { configureStore } from "@reduxjs/toolkit";
 import storage from "redux-persist/lib/storage";
 import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
+import modalReducer from '../redux/Slice/modalSlice';
 
 const reducers = combineReducers({
+  modal: modalReducer,
   // user: UserSlice,
   // language: LanguageSlice,
   // game: GamesSlice,
