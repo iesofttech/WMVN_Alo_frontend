@@ -1,15 +1,10 @@
 .container {
-  /* max-width: 561px; */
-  /* background: url('../../Assets/home/Background.png'); */
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* margin-right: 1.5%; */
   padding: 20px;
   gap: 10px;
   box-sizing: border-box;
-  /* Firefox */
 }
 
 .container::-webkit-scrollbar {
@@ -18,14 +13,12 @@
 
 .accountProfileBlur {
   height: auto;
-  /* UI Properties */
   background: #172634 0% 0% no-repeat padding-box;
   border: 1px solid #355471;
   padding: 10px;
   box-sizing: border-box;
   box-shadow: 0px 3px 6px #000000d6;
   border-radius: 20px;
-  /* border: none;  */
   opacity: 1;
   backdrop-filter: blur(38px);
   -webkit-backdrop-filter: blur(38px);
@@ -33,7 +26,6 @@
 
 .accountProfile {
   height: auto;
-  /* width: 100%; */
   background: transparent linear-gradient(110deg, #0a151f 0%, #2a445b 100%) 0%
     0% no-repeat padding-box;
   border: 1px solid #2a445b;
@@ -48,14 +40,12 @@
 }
 
 .profileDetails {
-  /* width: 100%; */
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
 }
 
 .userFullNameStyle {
-  /* UI Properties */
+  
   text-align: left;
   font: normal normal normal 18px/27px Kanit;
   letter-spacing: 0px;
@@ -69,6 +59,7 @@
   opacity: 1;
   object-fit: contain;
 }
+
 
 .levelStyle {
   display: flex;
@@ -99,9 +90,7 @@
   letter-spacing: 0px;
   color: white;
   opacity: 1;
-  /* overflow: hidden; */
   white-space: nowrap;
-  /* text-overflow: ellipsis; */
   max-width: fit-content;
   width: 100%;
   gap: 5px;
@@ -119,20 +108,15 @@
   letter-spacing: 0px;
   color: #8db4d8;
   opacity: 1;
-  /* overflow: hidden; */
   white-space: nowrap;
-  /* text-overflow: ellipsis; */
   max-width: fit-content;
   width: 100%;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   justify-content: start;
-  /* gap: 10px; */
 }
 
 .profileBalanceAmount {
-  /* UI Properties */
   text-align: left;
   font: normal normal normal 26px/39px Kanit;
   letter-spacing: 0px;
@@ -141,21 +125,11 @@
 }
 
 .userNameStyle {
-  /* UI Properties */
   text-align: center;
   font: normal normal normal 14px/21px Kanit;
   letter-spacing: 0px;
   color: #f3f5f7;
   opacity: 1;
-  /* font-style: normal; 
-    font-variant: normal; 
-    font-weight: normal; 
-    font-size: 12px; 
-    line-height: 24px; 
-    font-family: Roboto; 
-    letter-spacing: 0px; 
-    color: #ffffff; 
-    opacity: 1;  */
   margin-top: 10px;
   margin-right: auto;
 }
@@ -194,16 +168,9 @@
 }
 
 @media (max-width: 479px) {
-  /* .accountProfile { 
-      justify-content: center; 
-    } */
 
   .balanceTextContainer {
     max-width: 200px;
-  }
-
-  .profileDetails {
-    /* justify-content: center; */
   }
 
   .profileDateStyling {
