@@ -9,6 +9,7 @@ import Register from "./pages/auth/Register/Register";
 import Support from "./pages/Support/Support";
 import { privateRoutes } from "./routes/PrivateRoutes";
 import PrivateRoute from "./routes/PrivateRoute";
+import BettingRecord from "./pages/Betting_Record/BettingRecord";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/support" element={<Support />} />
+          <Route path="/account/betting-records" element={<BettingRecord />} />
           {/* <Route path="*" element={<PageNotFound />} />
         <Route path="/games/:name" element={<Games />} />
         <Route path="/promotions" element={<Bonus />} />

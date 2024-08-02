@@ -1,4 +1,5 @@
 import Account from "../pages/Account/Account";
+import BettingRecord from "../pages/Betting_Record/BettingRecord";
 import Deposit from "../pages/Transfer_money/Deposit/Deposit";
 import Withdraw from "../pages/Transfer_money/Withdraw/Withdraw";
 
@@ -43,11 +44,11 @@ export const privateRoutes = [
   //   path: '/transections/:id',
   //   component: SingleTransaction,
   // },
-  // {
-  //   id: 9,
-  //   path: '/account/betting-records',
-  //   component: BettingRecord,
-  // },
+  {
+    id: 9,
+    path: '/account/betting-records',
+    component: BettingRecord,
+  },
   // {
   //   id: 10,
   //   path: '/account/invite-friend',

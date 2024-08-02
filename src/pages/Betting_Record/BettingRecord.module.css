@@ -1,0 +1,68 @@
+/* The main container styling */
+.container {
+  background: #172634 0% 0% no-repeat padding-box;
+  /* border: 1px solid red; */
+  min-height: 100vh; /* Ensures the container covers the full viewport height */
+  width: 100%; /* Ensures the container covers the full viewport width */
+  display: flex;
+  flex-direction: column;
+  padding:""
+}
+
+/* Nav.module.css */
+
+.navContainer {
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px; /* Adjust spacing as needed */
+}
+
+.navButtons {
+  display: flex;
+  align-items: center; /* Center buttons vertically */
+}
+
+.navButtons button {
+  margin-left: 10px; /* Space between buttons */
+}
+
+/* /////////// */
+/* Card */
+.card {
+  position: absolute;
+  top: 198px;
+  width: 460px;
+  background: #0a151f;
+  border: 1px solid #294056;
+  border-radius: 10px;
+  opacity: 1;
+  color: #ffffff;
+  padding: 16px;
+}
+
+.text {
+  margin-bottom: 8px;
+}
+
+.profitLoss {
+  color: #ff4d4f;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.gutter-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
