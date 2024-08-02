@@ -73,16 +73,27 @@
   border-radius: 5px;
 }
 
-.button {
+.button {  width: 250px;
   border-radius: 26px;
   left: 10%;
-  width: 50%;
-  background: transparent linear-gradient(180deg, #E68812 0%, #FABB0A 100%) 0% 0% no-repeat padding-box;
+  height: 45px;
+  background: transparent linear-gradient(180deg, #e68812 0%, #fabb0a 100%) 0%
+    0% no-repeat padding-box;
   border-color: #ffa500;
+  box-shadow: 0px 3px 5px #00000026;
 }
 
 .buttonLink {
   color: #ffa500;
+
+  margin-left: 35px;
+  /* left: 670px; */
+  width: 100px;
+  height: 45px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 5px #00000026;
+  border-radius: 26px;
+  opacity: 1;
 }
 
 .footer {
@@ -102,9 +113,7 @@
 
   .inputGroup {
     flex-direction: column;
- margin-left: 20px;
-
-
+    margin-left: 20px;
   }
 
   .inputWrapper {
@@ -121,31 +130,25 @@
   .inputLabel {
     margin-bottom: 5px;
     margin-left: 44px;
-
   }
 
-  .button {
-    height: 40px;
-    font-size: 14px;
-    width:"100%";
-  }
+  
 
   .footer {
     font-size: 10px;
   }
 }
 .ant-form-item-explain {
-  font-size: 190px; color: #483da8;
- /* Error message color */
+  font-size: 190px;
+  color: #483da8;
+  /* Error message color */
   margin: 4px 0 0 0; /* Adjust margins */
   margin-left: 40%;
 }
 
 .ant-form-item-explain-error {
- /* Remove default margin if needed */
- 
+  /* Remove default margin if needed */
 }
-
 
 .error {
   margin-left: 17%;
@@ -168,5 +171,46 @@
 @media (max-width: 480px) {
   .error {
     margin-left: 17%;
+  }
+}
+.flex-container {
+  display: flex;
+  /* background-color: #f1f1f1; */
+}
+/* flex-container > Flex.Item {
+  background-color: DodgerBlue;
+  color: white;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+} */
+
+@media (max-width: 768px) {
+  .button {
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .buttonLink {
+    width: 80px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    width: 130px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .buttonLink {
+    width: 80%;
+    height: 40px;
+    font-size: 12px;
   }
 }
