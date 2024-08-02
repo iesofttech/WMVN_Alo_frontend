@@ -30,13 +30,13 @@ const Register = () => {
 
   // Function to handle form submission
   const onFinish = (values) => {
-    console.log("Form values:", values);
+    // console.log("Form values:", values);
     // Optionally, send the values to a backend API or save them
   };
 
   // Function to handle form submission failure
   const onFinishFailed = (errorInfo) => {
-    console.log("Form submission failed:", errorInfo);
+    // console.log("Form submission failed:", errorInfo);
   };
 
   // Function to validate each field
@@ -101,7 +101,9 @@ const Register = () => {
         onFinishFailed={onFinishFailed}
       >
         <Form.Item className={styles.formItem}>
-          <span className={styles.label} style={{paddingLeft:"10px"}}>Contact Name:</span>
+          <span className={styles.label} style={{ paddingLeft: "10px" }}>
+            Contact Name:
+          </span>
           <span className={styles.labelHighlighted}> SV388</span>
         </Form.Item>
 
@@ -155,19 +157,22 @@ const Register = () => {
           name="fullName"
           className={styles.inputGroup}
           validateStatus={errors.fullName ? "error" : ""}
-         
-          help= {<div
-          style={{
-            display: "flex",
-            color: "red",
-            fontSize: "12px",
-            // set the width to match the input field
-            marginTop: "4px",
-            marginLeft: "17%",
-            wordWrap: "break-word",
-            width: "75%", // ensures long messages wrap
-          }}
-        >{errors.fullName}</div>}
+          help={
+            <div
+              style={{
+                display: "flex",
+                color: "red",
+                fontSize: "12px",
+                // set the width to match the input field
+                marginTop: "4px",
+                marginLeft: "17%",
+                wordWrap: "break-word",
+                width: "75%", // ensures long messages wrap
+              }}
+            >
+              {errors.fullName}
+            </div>
+          }
           rules={[
             { required: true, message: "Full Name is required." },
             { min: 3, message: "Name must be at least 3 characters long." },
@@ -193,18 +198,22 @@ const Register = () => {
           name="password"
           className={styles.inputGroup}
           validateStatus={errors.password ? "error" : ""}
-          help= {<div
-            style={{
-              display: "flex",
-              color: "red",
-              fontSize: "12px",
-              // set the width to match the input field
-              marginTop: "4px",
-              marginLeft: "17%",
-              wordWrap: "break-word",
-              width: "75%", // ensures long messages wrap
-            }}
-          >{errors.password}</div>}
+          help={
+            <div
+              style={{
+                display: "flex",
+                color: "red",
+                fontSize: "12px",
+                // set the width to match the input field
+                marginTop: "4px",
+                marginLeft: "17%",
+                wordWrap: "break-word",
+                width: "75%", // ensures long messages wrap
+              }}
+            >
+              {errors.password}
+            </div>
+          }
           rules={[
             { required: true, message: "Password is required." },
             {
@@ -242,18 +251,22 @@ const Register = () => {
           name="confirmPassword"
           className={styles.inputGroup}
           validateStatus={errors.confirmPassword ? "error" : ""}
-          help={<div
-            style={{
-              display: "flex",
-              color: "red",
-              fontSize: "12px",
-              // set the width to match the input field
-              marginTop: "4px",
-              marginLeft: "17%",
-              wordWrap: "break-word",
-              width: "75%", // ensures long messages wrap
-            }}
-          >{errors.confirmPassword}</div>}
+          help={
+            <div
+              style={{
+                display: "flex",
+                color: "red",
+                fontSize: "12px",
+                // set the width to match the input field
+                marginTop: "4px",
+                marginLeft: "17%",
+                wordWrap: "break-word",
+                width: "75%", // ensures long messages wrap
+              }}
+            >
+              {errors.confirmPassword}
+            </div>
+          }
           rules={[
             { required: true, message: "Please confirm your password!" },
             ({ getFieldValue }) => ({
@@ -290,18 +303,22 @@ const Register = () => {
           name="phoneNumber"
           className={styles.inputGroup}
           validateStatus={errors.phoneNumber ? "error" : ""}
-          help={<div
-            style={{
-              display: "flex",
-              color: "red",
-              fontSize: "12px",
-              // set the width to match the input field
-              marginTop: "4px",
-              marginLeft: "17%",
-              wordWrap: "break-word",
-              width: "75%", // ensures long messages wrap
-            }}
-          >{errors.phoneNumber}</div>}
+          help={
+            <div
+              style={{
+                display: "flex",
+                color: "red",
+                fontSize: "12px",
+                // set the width to match the input field
+                marginTop: "4px",
+                marginLeft: "17%",
+                wordWrap: "break-word",
+                width: "75%", // ensures long messages wrap
+              }}
+            >
+              {errors.phoneNumber}
+            </div>
+          }
           rules={[
             { required: true, message: "Phone Number is required." },
             {
@@ -356,36 +373,49 @@ const Register = () => {
           </div>
         </Form.Item> */}
 
-        {/* <div style={{ display: "flex", flexDirection: "row" }}> */}
-          <Form.Item>
-            <Button type="primary" htmlType="submit" className={styles.button}>
-              Submit
-            </Button>
-          </Form.Item>
+        <div
+          style={{
+            background: "#F1F1F1 0% 0% no-repeat padding-box",
+            padding: "10px",
+            borderBottomRightRadius: "15px",
+            borderBottomLeftRadius: "15px",
+          }}
+        >
+          <div style={{ display: "flex" }}>
+            <Form.Item>
+              <Button
+                type="primary"
+                htmlType="submit"
+                className={styles.button}
+              >
+                Submit
+              </Button>
+            </Form.Item>
 
-          <Form.Item style={{ textAlign: "center", marginBottom: "20px" }}>
-            <Button type="link" className={styles.buttonLink}>
-              <HomeOutlined />
-            </Button>
-          </Form.Item>
-        {/* </div> */}
+            <Form.Item style={{ textAlign: "center", marginBottom: "20px" }}>
+              <Button type="link" className={styles.buttonLink}>
+                <HomeOutlined />
+              </Button>
+            </Form.Item>
+          </div>
 
-        <div>
-          <ul>
-            <li>
-              <p>
-                By clicking "Submit", you agree to GA368 Terms of Use and
-                Privacy Policy.
-              </p>
-            </li>
-            <li>
-              <p>
-                You consent to receive phone call, SMS, and email messages from
-                GA368 to provide updates on your order and/or for marketing
-                purposes.
-              </p>
-            </li>
-          </ul>
+          <div>
+            <ul>
+              <li>
+                <p>
+                  By clicking "Submit", you agree to GA368 Terms of Use and
+                  Privacy Policy.
+                </p>
+              </li>
+              <li>
+                <p>
+                  You consent to receive phone call, SMS, and email messages
+                  from GA368 to provide updates on your order and/or for
+                  marketing purposes.
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
       </Form>
     </div>
