@@ -101,7 +101,7 @@ const Register = () => {
         onFinishFailed={onFinishFailed}
       >
         <Form.Item className={styles.formItem}>
-          <span className={styles.label}>Contact Name:</span>
+          <span className={styles.label} style={{paddingLeft:"10px"}}>Contact Name:</span>
           <span className={styles.labelHighlighted}> SV388</span>
         </Form.Item>
 
@@ -155,7 +155,19 @@ const Register = () => {
           name="fullName"
           className={styles.inputGroup}
           validateStatus={errors.fullName ? "error" : ""}
-          help={errors.fullName}
+         
+          help= {<div
+          style={{
+            display: "flex",
+            color: "red",
+            fontSize: "12px",
+            // set the width to match the input field
+            marginTop: "4px",
+            marginLeft: "17%",
+            wordWrap: "break-word",
+            width: "75%", // ensures long messages wrap
+          }}
+        >{errors.fullName}</div>}
           rules={[
             { required: true, message: "Full Name is required." },
             { min: 3, message: "Name must be at least 3 characters long." },
@@ -181,7 +193,18 @@ const Register = () => {
           name="password"
           className={styles.inputGroup}
           validateStatus={errors.password ? "error" : ""}
-          help={errors.password}
+          help= {<div
+            style={{
+              display: "flex",
+              color: "red",
+              fontSize: "12px",
+              // set the width to match the input field
+              marginTop: "4px",
+              marginLeft: "17%",
+              wordWrap: "break-word",
+              width: "75%", // ensures long messages wrap
+            }}
+          >{errors.password}</div>}
           rules={[
             { required: true, message: "Password is required." },
             {
@@ -219,7 +242,18 @@ const Register = () => {
           name="confirmPassword"
           className={styles.inputGroup}
           validateStatus={errors.confirmPassword ? "error" : ""}
-          help={errors.confirmPassword}
+          help={<div
+            style={{
+              display: "flex",
+              color: "red",
+              fontSize: "12px",
+              // set the width to match the input field
+              marginTop: "4px",
+              marginLeft: "17%",
+              wordWrap: "break-word",
+              width: "75%", // ensures long messages wrap
+            }}
+          >{errors.confirmPassword}</div>}
           rules={[
             { required: true, message: "Please confirm your password!" },
             ({ getFieldValue }) => ({
@@ -256,7 +290,18 @@ const Register = () => {
           name="phoneNumber"
           className={styles.inputGroup}
           validateStatus={errors.phoneNumber ? "error" : ""}
-          help={errors.phoneNumber}
+          help={<div
+            style={{
+              display: "flex",
+              color: "red",
+              fontSize: "12px",
+              // set the width to match the input field
+              marginTop: "4px",
+              marginLeft: "17%",
+              wordWrap: "break-word",
+              width: "75%", // ensures long messages wrap
+            }}
+          >{errors.phoneNumber}</div>}
           rules={[
             { required: true, message: "Phone Number is required." },
             {
@@ -283,7 +328,7 @@ const Register = () => {
           </div>
         </Form.Item>
 
-        <Form.Item
+        {/* <Form.Item
           name="email"
           className={styles.inputGroup}
           validateStatus={errors.email ? "error" : ""}
@@ -309,7 +354,7 @@ const Register = () => {
               required
             />
           </div>
-        </Form.Item>
+        </Form.Item> */}
 
         {/* <div style={{ display: "flex", flexDirection: "row" }}> */}
           <Form.Item>
