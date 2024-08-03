@@ -1,49 +1,91 @@
+/* General Styling */
+
 /* The main container styling */
 .container {
   background: #172634 0% 0% no-repeat padding-box;
-  /* border: 1px solid red; */
-  min-height: 100vh; /* Ensures the container covers the full viewport height */
-  width: 100%; /* Ensures the container covers the full viewport width */
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  padding:""
+  /* justify-content: space-between; */
+  padding: 0;
+  color: white;
 }
 
-/* Nav.module.css */
-
 .navContainer {
-  color: white;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 86%;
+  margin: auto;
+  margin-top: 10px;
+  color: white;
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  box-sizing: border-box;
+  flex-wrap: nowrap; /* Ensure items stay in a single row */
 }
 
 .navItem {
-  display: flex;
-  flex-direction: column;
-  margin-right: 20px; /* Adjust spacing as needed */
+  flex: 1; /* Make items grow to fill available space */
+  text-align: center; /* Center the text inside each item */
+  padding: 0 10px; /* Space between items */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 1200px) {
+  .navItem {
+    flex: 0 1 150px; /* Adjust size for medium screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .navItem {
+    flex: 0 1 120px; /* Adjust size for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .navItem {
+    flex: 0 1 100px; /* Adjust size for mobile screens */
+  }
+}
+
+@media (max-width: 360px) {
+  .navItem {
+    flex: 0 1 80px; /* Adjust size for very small screens */
+  }
+}
+
+
+.navItem {
+  justify-content: flex-start;
+  background: ;
+  
 }
 
 .navButtons {
+  /* flex-shrink: 1; */
   display: flex;
-  align-items: center; /* Center buttons vertically */
+  gap: 5px;
+  margin-top: 22px;
+  white-space: nowrap;
 }
 
-.navButtons button {
-  margin-left: 10px; /* Space between buttons */
-}
-
-/* /////////// */
-/* Card */
+/* Card Styles */
 .card {
-  position: absolute;
-  top: 198px;
-  width: 460px;
+  position: relative;
+  top: 20px;
+  width: 90%;
+  max-width: 460px;
   background: #0a151f;
   border: 1px solid #294056;
   border-radius: 10px;
   opacity: 1;
   color: #ffffff;
   padding: 16px;
+  margin: auto;
+  margin-top: 10px;
 }
 
 .text {
@@ -56,13 +98,170 @@
   justify-content: flex-start;
 }
 
-.gutter-row {
+.gutterRow {
   display: flex;
   justify-content: space-between;
 }
 
-.icon {
-  margin-left: 8px;
-  cursor: pointer;
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .navItem {
+    margin-right: 16px;
+  }
 }
+
+@media (max-width<760px) {
+  /* .navContainer
+  {
+ 
+  }
+  .navItem {
+    min-width: auto;
+    flex: 1 1 auto;
+  }
+
+  .navButtons {
+    margin-left: 4px;
+  }
+
+  .navButtons button {
+    font-size: 12px;
+    margin-left: 4px;
+    padding: 2px 6px;
+  } */
+
+  .card {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .text,
+  .profitLoss {
+    font-size: 10px;
+  }
+
+  .gutterRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.dateSelectorContainer {
+  /* text-align: left;
+  font: normal normal normal 14px/36px Kanit;
+  letter-spacing: 0px;
+
+  text-transform: capitalize;
+  opacity: 1;  color: #ffffff; */
+}
+.datePickerInput {
+  background: #0a151f 0% 0% no-repeat padding-box;
+  border: 1px solid #294056;
+  border-radius: 7px;
+  opacity: 1;
+  color: #ffffff;
+}
+.searchButton {
+  background: transparent linear-gradient(180deg, #dd7411 0%, #c2630a 100%) 0%
+    0% no-repeat padding-box;
+  border: 1px solid #dd7411;
+  border-radius: 7px;
+  opacity: 1;  background: #dd7411;
+
+}
+.resetButton{
+  background: #0A151F 0% 0% no-repeat padding-box;
+border: 1px solid #7B7B8A;
+border-radius: 7px;
+opacity: 1;
+color:white
+}
+.customSelect {
+  color: red !important ;
+  background-color: blue;
+   /* Change this to your desired color */
+}
+.dateSelectorContainer {
+  /* Add any container-specific styles here */
+}
+
+.customRangePicker .ant-picker {
+  font-size: 8px; /* Adjust font size */
+  color: white; /* Set text color */
+}
+
+.customRangePicker .ant-picker-dropdown {
+  max-width: 100vw; /* Limit the width of the popup */
+  max-height: 100vh; /* Limit the height of the popup */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  overflow: auto; /* Add scrollbars if content overflows */
+}
+
+/* If needed, you can add more styles for the popup */
+
+
+.customSelect {
+  --icon-color: red; /* This custom property will not work with Ant Design */
+  background-color: #4E89FF; /* Adjust the background color */
+  color: white; /* Adjust the text color */
+}
+
+.customSelect .ant-select-selector {
+  background-color: #4E89FF; /* Background color of the select box */
+  color: white; /* Text color inside the select box */
+}
+
+.customSelect .ant-select-arrow {
+  color: red; /* Change the color of the dropdown arrow */
+}
+
+/* Add more styles if needed */
+.navContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 86%;
+  justify-content: space-between;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  margin: auto;
+  margin-top: 10px;
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  box-sizing: border-box;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px; /* Space between items */
+}
+
+.navLabel {
+  margin-bottom: 8px; /* Space between label and input */
+  font-weight: bold; /* Make the label stand out */
+}
+
+.navButtons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.searchButton {
+  background-color: #4E89FF; /* Customize button color */
+  border: none;
+}
+
+.resetButton {
+  background-color: transparent; /* Transparent background for reset button */
+  border: 1px solid #4E89FF; /* Border color for reset button */
+  color: #4E89FF; /* Text color for reset button */
+}
+
+.resetButton:hover {
+  background-color: #4E89FF; /* Hover effect */
+  color: white;
+}
+
 

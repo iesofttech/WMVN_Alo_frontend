@@ -1,22 +1,26 @@
 import React from "react";
 import { DatePicker, Space } from "antd";
+import styles from "./BettingRecord.module.css"; // Import CSS module
+
 const { RangePicker } = DatePicker;
+
 const onOk = (value) => {
   console.log("onOk: ", value);
 };
 
 function DateSelector() {
   return (
-    <div>
-      <Space direction="vertical" size={12}>
-        <DatePicker
-          showTime
+    <div className={styles.dateSelectorContainer}>
+      <Space size={1}>
+        <RangePicker
+          className={styles.customRangePicker}
+          format="DD/MM"
           onChange={(value, dateString) => {
             console.log("Selected Time: ", value);
             console.log("Formatted Selected Time: ", dateString);
           }}
           onOk={onOk}
-        />{" "}
+        />
       </Space>
     </div>
   );

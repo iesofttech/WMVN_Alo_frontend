@@ -1,21 +1,25 @@
 import React from "react";
-import styles from "./BettingRecord.module.css"; // Import the CSS Module
-import DateSelector from "./DateSelector"; // Adjust import according to your file structure
-import { Button } from "antd"; // Importing Button from antd
+import styles from "./BettingRecord.module.css"; 
+import DateSelector from "./DateSelector"; 
+import { Button } from "antd"; 
+import CustomSelection from "./CustomSelection";
 
 function Nav() {
   return (
     <div className={styles.navContainer}>
       <div className={styles.navItem}>
-        <div>Date</div>
+        <div className={styles.navLabel}>Date</div>
         <DateSelector />
       </div>
 
-      <div className={styles.navItem}>Providers</div>
+      <div className={styles.navItem}>
+        <div className={styles.navLabel}>Providers</div>
+        <CustomSelection />
+      </div>
 
       <div className={styles.navButtons}>
-        <Button>Search</Button>
-        <Button>Reset</Button>
+        <Button type="primary" className={styles.searchButton}>Search</Button>
+        <Button className={styles.resetButton}>Reset</Button>
       </div>
     </div>
   );
