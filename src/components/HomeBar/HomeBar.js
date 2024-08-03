@@ -47,7 +47,7 @@ const HomeBar = () => {
             </div>
           </div>
         </Link>
-        <Link to="/">
+        <Link to="/withdraw">
           <div className={styles.imagesWrapper}>
             <img
               width={24}

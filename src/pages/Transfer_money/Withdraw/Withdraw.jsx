@@ -1,9 +1,12 @@
 import React from "react";
+import ShowBalance from "./ShowBalance";
+import WithdrawSteps from "./WithdrawSteps";
 
 const Withdraw = () => {
   return (
     <>
-      <div style={{ color: "white" }}>Withdraw</div>
+      <ShowBalance />
+      <WithdrawSteps />
     </>
   );
 };
