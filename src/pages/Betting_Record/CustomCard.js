@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Col, Row } from "antd";
 import styles from "./BettingRecord.module.css";
-import { CopyOutlined } from '@ant-design/icons';
+import { CopyOutlined } from "@ant-design/icons";
 
 function CustomCard() {
   return (
